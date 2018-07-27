@@ -82,22 +82,25 @@ h1 {
 				<form action="register.php" method ="POST" class="form-4" >
 				 <h1>Register</h1>
 	First name
-<input class="form-control" name="Fname" placeholder="eg:Johann" type="text">
+<input class="form-control" name="Fname" placeholder="eg:Johann" type="text" pattern="[a-zA-Z]{50}" title="Only Letters">
 	Last name
-<input class="form-control" name="Lname" placeholder="eg:Bach" type="text">
+<input class="form-control" name="Lname" placeholder="eg:Bach" type="text" pattern="[A-Za-z]{50}" title="Only Letters">
  Email
-<input class="form-control" name="Email" placeholder="eg:johannes@yaho.com" type="text">
+<input class="form-control" name="Email" placeholder="eg:johannes@yaho.com" type="email">
 
 	Username
 <input class="form-control" name="Username" placeholder="choose a username" type="text">
 
     Password
 <input class="form-control" name="Password" placeholder="choose a password" type ="password">
-  Name of your primary school?
-<input class="form-control" name="Security" placeholder="please answer the security question" type ="text">
+ 
+<!--Name of your primary school?
+<input class="form-control" name="Security" placeholder="please answer the security question" type ="text">--> 
 
  <input type="submit" class="btn btn-primary" name="sub" value="Register">
-</form>
+ <input type="Reset" class="btn btn-primary" name="reset" value="Reset">
+
+				</form>
 			</section>
 
         </div>

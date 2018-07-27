@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-	Interphase by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -21,7 +17,7 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<link rel="stylesheet" href="css/ie/v8.css" />
 		<!--<style >
 		body {
 				background: #7f9b4e url(images1/bus3.jpg) no-repeat center top;
