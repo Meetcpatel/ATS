@@ -9,7 +9,7 @@ $id = $_SESSION['Bus_id'];
 $upd= "UPDATE bus SET seats=(seats-$req) WHERE Id=$id";
 
 // insert into booking
-// train setas decrease
+// train setas decrea
 
 mysql_query($ins) or die(mysql_error());
 mysql_query($upd) or die(mysql_error());
