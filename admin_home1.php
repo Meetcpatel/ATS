@@ -12,9 +12,9 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 	
-		<script src="recover/js/jquery.min.js"></script> 
-		<script src="recover/js/skel.min.js"></script>
-		<script src="recover/js/skel-layers.min.js"></script> 
+		<script src="js/jquery.min.js"></script> 
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script> 
 		<script src="recover/js/init.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="recover/css/skel.css" />
@@ -109,19 +109,19 @@ h2
 					<ul>
 						<li><a href="recover/admin_home1.php">Home</a></li>
 					<!--	<li><a href="#book">Book Now</a></li>-->
-						<li><a href="recover/admin_logout.php">Logout</a></li>
+						<li><a href="admin_logout.php">Logout</a></li>
 					</ul>
 				</nav>
 			</header>
 			<div class="container">
 				<?php
 		session_start();
-		if(isset($_SESSION['updt']))
+		if(isset($_SESSION['admin']))
 		{
 			echo '<p class="message"> <font size="5" color="White"> <center><i>';
-			echo $_SESSION['updt'];
+			echo $_SESSION['admin'];
 			echo "</i></center></font></p>";
-			unset($_SESSION['updt']);
+			unset($_SESSION['admin']);
 		}
 		?>
 
@@ -151,15 +151,15 @@ h2
  <br> To
   <input class="form-control" type="text" placeholder="Enter a city" name="Destination" >
  <br> Date of journey
-  <input class="form-control" type="text" placeholder="yyyy-mm-dd" name="Date" >
+  <input class="form-control" type="date" placeholder="yyyy-mm-dd" name="Date" >
  <br> No of seats
   <input class="form-control" type="text" placeholder="Enter no of seats available" name="Seats" >
   <br> Arrival time
-  <input class="form-control" type="text" placeholder="format-hhmmss" name="Arrival_time" >
+  <input class="form-control" type="time" placeholder="format-hhmmss" name="Arrival_time" >
   <br> Departure time
-  <input class="form-control" type="text" placeholder="format-hhmmss" name="Departure_time" >
+  <input class="form-control" type="time" placeholder="format-hhmmss" name="Departure_time" >
   <br> Fare
-  <input class="form-control" type="text" placeholder="Enter fare in rupees" name="Fare" >
+  <input class="form-control" type="number" placeholder="Enter fare in rupees" name="Fare" >
   <br>
   <input class="btn btn-primary" type="submit" value="Add">
 </form> 

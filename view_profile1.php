@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php 
+  session_start(); 
+  if (!isset($_SESSION['user'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['user']);
+  	header("location: login.php");
+  }
+?>
+
 <!--
 	Interphase by TEMPLATED
 	templated.co @templatedco
@@ -123,7 +136,6 @@ td{
 				</nav>
 			</header>
 			<div class="container">
-				<?php session_start();?>
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">

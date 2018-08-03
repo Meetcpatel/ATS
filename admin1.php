@@ -9,11 +9,11 @@
         <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />
         <link rel="shortcut icon" href="favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="recover/css1/style.css" />
-		<script src="recover/js1/modernizr.custom.63321.js"></script>
-       	<script src="recover/js/jquery.min.js"></script>
-		<script src="recover/js/skel.min.js"></script>
-		<script src="recover/js/skel-layers.min.js"></script>
-		<script src="recover/js/init.js"></script>
+		<script src="js1/modernizr.custom.63321.js"></script>
+       	<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="recover/css/skel.css" />
 			<link rel="stylesheet" href="recover/css/style.css" />
@@ -45,13 +45,13 @@ h1 {
     </head>
     <body >
     	<header id="header">
-				<h1><a href="recover/index.php">BookMyTicket</a></h1>
+				<h1><a href="index.php">BookMyTicket</a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="recover/index.php">Home</a></li>
+						<li><a href="index.php">Home</a></li>
 					<!--	<li><a href="#about">About</a></li>
-					-->	<li><a href="recover/index4.php">Users</a></li>
-						<li><a href="recover/admin1.php">Admin</a></li>
+					-->	<li><a href="index4.php">Users</a></li>
+						<li><a href="admin1.php">Admin</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -99,7 +99,7 @@ h1 {
 		}
 		?>
 			<section class="main">
-				<form class="form-4" action="recover/admin_login.php" method ="POST" >
+				<form class="form-4" action="admin_login.php" method ="POST" >
 				    <h1>Admin Login</h1>
 				    <p>
 				        Username
@@ -114,9 +114,7 @@ h1 {
 				        <input type="submit" class="btn-btn-primary" name="submit" value="Continue">
 				    </p>  
      				<p> 
-				    	<a href="recover/index4.php" > User Login</a>
-
-				    </p>
+				    	<a href="index4.php" > User Login<	    </p>
 				</form>​
 
 			</section>
