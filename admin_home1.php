@@ -12,14 +12,14 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 	
-		<script src="js/jquery.min.js"></script> 
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script> 
-		<script src="js/init.js"></script>
+		<script src="recover/js/jquery.min.js"></script> 
+		<script src="recover/js/skel.min.js"></script>
+		<script src="recover/js/skel-layers.min.js"></script> 
+		<script src="recover/js/init.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" href="recover/css/skel.css" />
+			<link rel="stylesheet" href="recover/css/style.css" />
+			<link rel="stylesheet" href="recover/css/style-xlarge.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--<style >
@@ -104,12 +104,12 @@ h2
 
 		<!-- Header -->
 			<header id="header">
-				<h1><a href="index.php">BookMyTicket</a></h1>
+				<h1><a href="recover/index.php">BookMyTicket</a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="admin_home1.php">Home</a></li>
+						<li><a href="recover/admin_home1.php">Home</a></li>
 					<!--	<li><a href="#book">Book Now</a></li>-->
-						<li><a href="admin_logout.php">Logout</a></li>
+						<li><a href="recover/admin_logout.php">Logout</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -164,7 +164,7 @@ h2
   <input class="btn btn-primary" type="submit" value="Add">
 </form> 
 <br>
-<a href="#" class="image fit"><img src="images1/bus3.jpg" alt="" /></a>
+<a href="#" class="image fit"><img src="recover/images1/bus3.jpg" alt="" /></a>
 </div>
 		<!-- Footer --><footer id="footer">
 				<div class="container">

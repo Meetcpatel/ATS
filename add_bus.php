@@ -1,5 +1,5 @@
 <?php
-include "include.php";
+include "recover/include.php";
 
 $ins="INSERT INTO `bus`(`Name`,`Origin`,`Destination`,`Seats`,`Arrival_time`,`Departure_time`,`Date`,`Fare`)VALUES('".$_POST['Name']."','".$_POST['Origin']."','".$_POST['Destination']."','".$_POST['Seats']."','".$_POST['Arrival_time']."','".$_POST['Departure_time']."','".$_POST['Date']."','".$_POST['Fare']."')";
 

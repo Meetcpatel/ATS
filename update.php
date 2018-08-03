@@ -12,14 +12,14 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 	
-		<script src="js/jquery.min.js"></script> 
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script> 
-		<script src="js/init.js"></script>
+		<script src="recover/js/jquery.min.js"></script> 
+		<script src="recover/js/skel.min.js"></script>
+		<script src="recover/js/skel-layers.min.js"></script> 
+		<script src="recover/js/init.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" href="recover/css/skel.css" />
+			<link rel="stylesheet" href="recover/css/style.css" />
+			<link rel="stylesheet" href="recover/css/style-xlarge.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--<style >
@@ -110,15 +110,15 @@ td{
 
 		<!-- Header -->
 			<header id="header">
-				<h1><a href="index.php">BookMyTicket</a></h1>
+				<h1><a href="recover/index.php">BookMyTicket</a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="generic.php">Home</a></li>
+						<li><a href="recover/generic.php">Home</a></li>
 					<!--	<li><a href="#book">Book Now</a></li>-->
-						<li><a href="history1.php">Booking History</a></li>
-						<li><a href="profile.php">View Profile</a></li>
-						<li><a href="update.php">Update Profile</a></li>
-						<li><a href="logout.php">Logout</a></li>
+						<li><a href="recover/history1.php">Booking History</a></li>
+						<li><a href="recover/profile.php">View Profile</a></li>
+						<li><a href="recover/update.php">Update Profile</a></li>
+						<li><a href="recover/logout.php">Logout</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -165,7 +165,7 @@ else
 <div class="container" >
 	
 		<a name="register"> </a>
-<form action="change.php" method ="POST" class="form-horizontal" > 
+<form action="recover/change.php" method ="POST" class="form-horizontal" > 
 	First name
 <input class="form-control" name="Fname" type="text" value="<?php echo $row['Fname'];?>">
 	<br>Last name
@@ -180,7 +180,7 @@ else
 </form>
 </div>
 <br>
-<a href="#" class="image fit"><img src="images1/bus3.jpg" alt="" /></a>
+<a href="#" class="image fit"><img src="recover/images1/bus3.jpg" alt="" /></a>
 </div>
 		<!-- Footer --><footer id="footer">
 				<div class="container">
