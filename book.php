@@ -6,6 +6,7 @@ $ins="INSERT INTO `booking`(`user`,`Bus_id`,`Seats_no`,`Total_fare`,`Bank`,`Paym
 $req=$_SESSION['Seats_no'];
 $id = $_SESSION['Bus_id'];
 
+// Heo
 $upd= "UPDATE bus SET seats=(seats-$req) WHERE Id=$id";
 
 // insert into booking
