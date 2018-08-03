@@ -24,7 +24,7 @@
 		<style>	
 			@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 			body {
-				background: #7f9b4e url(recover/images1/login.jpg) no-repeat center top;
+				background: #7f9b4e url(images1/login.jpg) no-repeat center top;
 				-webkit-background-size: cover;
 				-moz-background-size: cover;
 				background-size: cover;
