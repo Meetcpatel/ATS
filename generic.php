@@ -1,5 +1,16 @@
 <!DOCTYPE html>
-
+<?php 
+  session_start(); 
+  if (!isset($_SESSION['user'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['user']);
+  	header("location: login.php");
+  }
+?>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -113,8 +124,7 @@ h2
 				</nav>
 			</header>
 			<div class="container">
-			<?php
-		session_start();
+			<?php	
 		if(isset($_SESSION['pay']))
 		{
 			echo '<p class="message"> <font size="5" color="MediumVioletRedMagenta"> <center><i>';
@@ -156,9 +166,9 @@ h2
 			<form action="bus_details1.php" method="POST">
 
   From
-  <input class="form-control" placeholder="Enter a city" type="text" name="Origin" pattern="[a-zA-Z]{10}" >
+  <input class="form-control" placeholder="Enter a city" type="text" name="Origin" pattern="[a-zA-Z]{3}" >
  <br> To
-  <input class="form-control" type="text" placeholder="Enter a city" name="Destination" >
+  <input class="form-control" type="text" placeholder="Enter a city" name="Destination" pattern="[a-zA-Z]{3}" >
  <br> Date of journey
   <input class="form-control" type="date" placeholder="yyyy-dd-mm" name="Date" >
  <br> No of seats
