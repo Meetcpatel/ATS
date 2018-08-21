@@ -78,7 +78,8 @@ INSERT INTO `booking` (`Booking_id`, `UserID`, `Date`, `Bus_id`, `Seats_no`, `To
 (3, 2, '2015-11-04 07:34:38', 15, 2, 2200, 'SBH', 'Net Banking'),
 (4, 2, '2015-11-05 00:03:02', 18, 1, 350, 'SBH', 'Net Banking'),
 (5, 2, '2015-11-05 02:52:06', 18, 1, 350, 'SBH', 'Net Banking'),
-(6, 2, '2015-11-06 02:37:32', 10, 2, 2000, 'SBH', 'Debit card');
+(6, 2, '2015-11-06 02:37:32', 10, 2, 2000, 'SBH', 'Debit card'),
+(7, 14, '2015-11-06 02:37:32', 10, 2, 2000, 'SBH', 'Debit card');
 
 -- --------------------------------------------------------
 
@@ -165,13 +166,19 @@ CREATE TABLE `passenger` (
   `P_id` int(11) NOT NULL,
   `P_fname` varchar(50) NOT NULL,
   `P_mname` varchar(50) NOT NULL,
-  `P_lname` int(11) NOT NULL,
+  `P_lname` varchar(11) NOT NULL,
   `P_aadhar` varchar(20) NOT NULL,
   `Seat_no` int(5) NOT NULL,
   `Booking_id` int(5) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
+INSERT INTO `passenger` (`p_id`, `p_fname`, `P_mname`, `P_lname`, `P_aadhar`, `Seat_no`, `Booking_id`) VALUES
+(1, 'sindha', 'nidhi', 'jashubhai', '123456789123', 12, 7 );
+
+
+
+
 
 --
 -- Table structure for table `user`
@@ -207,6 +214,29 @@ INSERT INTO `user` (`UserID`, `Fname`, `Lname`, `Email`, `Username`, `Password`,
 (14, 'Piyush', 'Bhatia ', 'bhatia@gmail.com', '123', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', '2018-07-27 06:43:52', '123');
 
 --
+CREATE TABLE `ticket` (
+  `T_id` int(11) NOT NULL,
+  `Booking_id` int(11) NOT NULL,
+  `P_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `ticket` (`T_id`, `Booking_id`, `P_id`) VALUES
+(11, 7, 1);
+
+CREATE TABLE `aadhar` (
+   `Aadhar_no` varchar(20) NOT NULL,
+   `P_id` int(11) NOT NULL,
+   `Fname` varchar(50) NOT NULL,
+   `Mname` varchar(50) NOT NULL,
+   `Lname` varchar(11) NOT NULL,
+    `dob`  date,
+    `address` varchar(50)
+  ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `aadhar` (`Aadhar_no`, `P_id`, `Fname`, `Mname`, `Lname`, `dob`, `address`) VALUES
+('123456789123', 1 , 'sindha', 'nidhi' , 'jashubhai', '1997-02-02' , 'surat');
+
 -- Indexes for dumped tables
 --
 
@@ -257,6 +287,16 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`UserID`),
   ADD UNIQUE KEY `Username` (`Username`);
 
+ALTER TABLE `ticket`
+  ADD PRIMARY KEY (`T_id`),
+  ADD KEY `P_id` (`P_id`);
+
+ALTER TABLE `aadhar`
+  ADD PRIMARY KEY (`Aadhar_no`),
+  ADD KEY `P_id` (`P_id`);
+
+
+
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -296,6 +336,14 @@ ALTER TABLE `passenger`
 --
 ALTER TABLE `user`
   MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+ALTER TABLE `ticket`
+  MODIFY `T_id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `aadhar`
+  MODIFY `Aadhar_no` int(20) NOT NULL AUTO_INCREMENT;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
